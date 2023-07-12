@@ -20,20 +20,20 @@ const editar = () => {
         alert('El número de teléfono debe tener 10 dígitos')
     } 
     else{
-        putCliente(id, {
+        putCliente({
             first_name: firstname.value,
             last_name: lastname.value,
             address: adress.value,
-            phone: phone.value             
-        })
+            phone: phone.value
+        }, id)
         .then(res => {
-            console.log(res)
-            alert('Cliente editado correctamente')
-            firstname.value = ''
-            lastname.value = ''
-            adress.value = ''
-            phone.value = ''
-        })
+            console.log(res);
+            alert('Cliente editado correctamente');
+            firstname.value = '';
+            lastname.value = '';
+            adress.value = '';
+            phone.value = '';
+        });
     }
 }
 
